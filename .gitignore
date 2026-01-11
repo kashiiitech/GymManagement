@@ -25,3 +25,6 @@ TestResults/
 ## OS
 .DS_Store
 Thumbs.db
+
+**/bin/
+**/obj/
