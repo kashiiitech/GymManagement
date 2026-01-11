@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "GymManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GymManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GymManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GymManagement.Application.dll": {}
+        }
+      },
+      "GymManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/GymManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GymManagement.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "GymManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../GymManagement.Application/GymManagement.Application.csproj",
+      "msbuildProject": "../GymManagement.Application/GymManagement.Application.csproj"
+    },
+    "GymManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../GymManagement.Domain/GymManagement.Domain.csproj",
+      "msbuildProject": "../GymManagement.Domain/GymManagement.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "GymManagement.Application >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Admin\\.nuget\\packages\\": {},
@@ -38,7 +75,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\Desktop\\CleanArchitectue\\src\\GymManagement.Application\\GymManagement.Application.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\CleanArchitectue\\src\\GymManagement.Application\\GymManagement.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
